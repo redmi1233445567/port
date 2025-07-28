@@ -25,7 +25,7 @@ export default function Footer() {
         Reach out to me today and let's discuss how I can help you achieve your
         goals.
       </p>
-      <Link href="https://wa.me/01223690246?text=اهلا%20عايز%20استفسر%20عن%20خدماتك">
+      <Link href="https://wa.me/+201223690246?text=اهلا%20عايز%20استفسر%20عن%20خدماتك">
         <div className="bg-linear-to-r from-[#6971A266] to-[#272A3C80] p-[1px] rounded-xl relative z-30 mt-[20px] max-md:w-full">
           <div className="bg-gradient-to-br flex justify-center items-center  from-[#161A31] to-[#06091F] rounded-xl px-[20px] py-[15px] hover:opacity-90 transition-all cursor-pointer text-[18px] font-[500] leading-[120%]">
             Contact Me Now
