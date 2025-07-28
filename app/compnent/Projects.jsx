@@ -56,7 +56,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px]">
+    <div className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px]" id="project">
       <p className="text-[48px] font-bold leading-[100%] text-center mt-[150px] mb-[60px]">
         A small selection of{" "}
         <span className="text-[#CBACF9]">recent projects</span>

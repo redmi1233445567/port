@@ -3,10 +3,19 @@ import r from "../../public/spotlight (1).png";
 import l from "../../public/spotlight (2).png";
 import Image from "next/image";
 import Link from "next/link";
+import bg from "../../public/BG.png";
 
 export default function Head() {
   return (
-    <div className="pt-[200px] flex flex-col items-center relative max-md:px-[20px]">
+    <div
+      className="pt-[200px] flex flex-col items-center relative max-md:px-[20px]"
+      id="head"
+    >
+      <Image
+        src={bg}
+        alt="Picture of the author"
+        className=" absolute top-0 left-0 w-full -z-40"
+      />
       <Image
         src={r}
         alt="Picture of the author"

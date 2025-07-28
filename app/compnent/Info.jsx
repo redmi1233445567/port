@@ -11,6 +11,7 @@ import c22 from "../../public/Card.png";
 import c3 from "../../public/Image (2).png";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
+import bg from "../../public/BG.png";
 
 export default function Info() {
   const copyEmail = () => {
@@ -21,7 +22,12 @@ export default function Info() {
   };
 
   return (
-    <div className="my-[60px]">
+    <div className="my-[60px] relative">
+      <Image
+        src={bg}
+        alt="Picture of the author"
+        className=" absolute top-0 left-0 w-full -z-30"
+      />
       <div className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px] grid grid-rows-6 grid-cols-11 xl:gap-[20px] max-xl:gap-y-[20px]  max-xl:grid-cols-2 max-xl:grid-rows-13">
         <div className=" relative col-span-7 row-span-6 rounded-2xl overflow-hidden max-xl:col-span-2 max-xl:row-span-7 ">
           <Image
@@ -54,7 +60,7 @@ export default function Info() {
             I prioritize client collaboration, fostering open communication
           </p>
         </div>
-        <div className="row-span-3 col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl ">
+        <div className="row-span-3 col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl relative -z-40">
           <div className=" p-[20px] bg-gradient-to-r from-[#04071D] to-[#0C0E23] rounded-2xl">
             <p className="font-bold text-[30px] max-w-[411px] max-md:text-[20px]">
               I’m very flexible with time zone communications
