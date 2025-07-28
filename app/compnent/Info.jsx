@@ -96,31 +96,31 @@ export default function Info() {
                 My tech stack
               </p>
             </div>
-            <div className=" absolute top-[-8%] right-[155px]">
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+            <div className=" absolute top-[-8%] right-[155px] max-md:right-[120px]">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 ReactJS
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 NuxtJS
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 Tailwind
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl max-md:px-[10px] max-md:py-[20px]">
                 jmghkj
               </p>
             </div>
             <div className=" absolute top-[-22%] right-[20px]">
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 max-md:px-[10px] max-md:py-[20px]">
                 jmghkj
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 HTML
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 Css
               </p>
-              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center">
+              <p className="bg-[#10132E] text-[14px] py-[20px] px-[30px] rounded-xl mb-2 text-center max-md:px-[10px] max-md:py-[20px]">
                 Typescript
               </p>
             </div>
