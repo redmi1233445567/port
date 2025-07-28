@@ -26,7 +26,7 @@ export default function Head() {
         alt="Picture of the author"
         className=" absolute top-0 left-0"
       />
-      <p className="text-[16px] font-[400] tracking-[5px] leading-1 max-md:text-[12px]">
+      <p className="text-[16px] font-[400] tracking-[5px] leading-1 max-md:text-[12px] max-sm:text-[9px]">
         Dynamic Web Magic with Next.js
       </p>
       <h1 className="text-[72px] max-md:text-[48px] tracking-[-3.6px] font-bold text-center max-w-[940px] my-[10px]">
