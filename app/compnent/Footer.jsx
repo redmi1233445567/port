@@ -9,15 +9,15 @@ import git from "../../public/divsectionocgcontainer.png";
 export default function Footer() {
   return (
     <div
-      className=" relative flex justify-center items-center flex-col max-md:mx-[20px]"
+      className=" relative flex justify-center items-center flex-col max-md:mx-[20px] overflow-hidden h-[660px]"
       id="footer"
     >
       <Image
         src={img}
         alt="Picture of the author"
-        className=" absolute top-[-180px] left-0 max-lg:top-0 max-md:w-full max-md:h-full"
+        className=" absolute top-[-290px] left-0 max-lg:top-0 w-full max-md:h-full"
       />
-      <p className="text-[48px] font-bold max-md:text-[20px] text-center md:w-[720px] tracking-[-2px] md:leading-[0.9] max-md:mt-[40px] md:mt-[174px]">
+      <p className="text-[48px] font-bold max-md:text-[20px] text-center md:w-[720px] tracking-[-2px] md:leading-[0.9] ">
         Ready to take <span className="text-[#CBACF9]">your</span> digital
         presence to the next level?
       </p>
@@ -32,10 +32,10 @@ export default function Footer() {
           </div>
         </div>
       </Link>
-      <div className="flex w-full p-[30px] justify-between absolute left-0 bottom-[-180px] flex-wrap max-md:justify-center max-md:gap-[20px]">
+      <div className="flex w-full py-[30px] justify-between px-[150px] max-2xl:px-[50px] max-md:mx-[20px]  absolute left-0 bottom-[40px] flex-wrap max-md:justify-center max-md:gap-[20px]">
         <p className="text-[14.83px]">Copyright ©2025 ahmedSayed</p>
         <div className="flex gap-[10px]">
-          <Link href="https://wa.me/01223690246?text=اهلا%20عايز%20استفسر%20عن%20خدماتك">
+          <Link href="https://wa.me/=201223690246?text=اهلا%20عايز%20استفسر%20عن%20خدماتك">
             <Image
               src={whats}
               alt="Picture of the author"
