@@ -16,6 +16,7 @@ export default function Home() {
       <Projects />
       <Word />
       <Work />
+      {/* <Test /> */}
       <Approach />
       <Footer />
     </div>

@@ -44,19 +44,19 @@ export default function Work() {
           return (
             <div
               key={item.id}
-              className="bg-linear-to-r from-[#3637496E] to-[#3637497D] p-[1px] rounded-2xl w-[600px] h-[190px] max-md:h-[230px] relative"
+              className="bg-linear-to-r from-[#3637496E] to-[#3637497D] p-[1px] rounded-2xl max-lg:w-full max-xl:w-[48%] w-[600px] h-[190px] max-md:h-[230px] relative"
             >
-              <div className=" flex gap-[20px] max-md:flex-col bg-gradient-to-br from-[#04071D] to-[#0C0E23] p-[30px] max-md:p-[20px] rounded-2xl h-full hover:opacity-90  transition-opacity">
+              <div className=" flex gap-[20px] max-md:flex-col bg-gradient-to-br from-[#04071D] to-[#0C0E23] p-[30px] max-xl:p-[20px] rounded-2xl h-full hover:opacity-90  transition-opacity">
                 <Image
                   src={item.img}
                   alt="Picture of the author"
-                  className="max-md:w-[66px] max-md:h-[60px]"
+                  className="max-md:w-[66px] max-xl:h-[60px]"
                 />
                 <div>
-                  <p className="text-[26px] font-bold max-md:text-[20px]">
+                  <p className="text-[26px] font-bold max-xl:text-[20px]">
                     {item.name}
                   </p>
-                  <p className="text-[#BEC1DD] text-[16px] font-[500] pt-[20px] max-md:pt-[10px] max-md:text-[14px]">
+                  <p className="text-[#BEC1DD] text-[16px] font-[500] pt-[20px] max-xl:pt-[0px] max-xl:text-[14px]">
                     {item.des}
                   </p>
                 </div>
