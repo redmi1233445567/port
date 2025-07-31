@@ -2,6 +2,7 @@
 import React, { useReducer, useState } from "react";
 import img from "../../public/section input.png";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Approach() {
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
@@ -42,6 +43,7 @@ export default function Approach() {
       <p className="text-[48px] font-bold mb-[30px] text-center">
         My <span className="text-[#CBACF9]">approach</span>
       </p>
+
       <div className="flex gap-[20px] justify-between max-lg:flex-wrap max-lg:justify-center">
         {data.map((phase) => {
           return (
@@ -65,27 +67,35 @@ export default function Approach() {
                     phase.show ? "hidden" : "block"
                   }`}
                 />
-                <div className="bg-linear-to-r from-[#6971A266] to-[#272A3C80] p-[1px] rounded-xl w-fit">
+                <div className="bg-linear-to-r from-[#6971A266] to-[#272A3C80]  p-[1px] rounded-xl w-fit">
                   <div
-                    className={`bg-gradient-to-br font-[600] from-[#161A31] to-[#06091F] rounded-xl p-[10px] text-[#CBACF9] text-center w-fit ${
+                    className={`bg-gradient-to-br font-[600] from-[#161A31]  to-[#06091F] transition duration-700 ease-in-out rounded-xl p-[10px] text-[#CBACF9] text-center w-fit ${
                       phase.show ? "text-[16px]" : "text-[30px]"
                     }`}
                   >
                     {phase.phase}
                   </div>
                 </div>
-                {phase.show ? (
-                  <div className="flex flex-col justify-center items-center gap-[20px] px-[20px] transition-[6s]">
-                    <p className="text-[32px] font-bold text-center py-[10px]">
-                      {phase.title}
-                    </p>
-                    <p className="text-[#E4ECFF] text-[16px] font-[400] text-center">
-                      {phase.des}
-                    </p>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+                <AnimatePresence initial={false}>
+                  {phase.show ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1 }}
+                      exit={{ opacity: 0, scale: 0 }}
+                      key="box"
+                    >
+                      <div className="flex flex-col justify-center items-center gap-[20px] px-[20px] transition-[6s]">
+                        <p className="text-[32px] font-bold text-center py-[10px]">
+                          {phase.title}
+                        </p>
+                        <p className="text-[#E4ECFF] text-[16px] font-[400] text-center">
+                          {phase.des}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
                 <Image
                   src={img}
                   alt="Picture of the author"

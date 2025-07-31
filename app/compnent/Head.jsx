@@ -41,7 +41,7 @@ export default function Head() {
         className="max-md:w-full"
       >
         <div className="bg-linear-to-r max-md:w-full mt-[40px] from-[#6971A266] to-[#272A3C80] w-[150px]  p-[1px] rounded-xl ">
-          <button className="bg-linear-to-r hover:scale-[105%] transition-all hover:drop-shadow-sm hover:shadow-amber-50 from-[#161A31] to-[#06091F] p-[15px] rounded-xl flex w-full justify-around cursor-pointer text-[18px] font-[500]">
+          <button className="bg-linear-to-r hover:scale-[105%] transition duration-700 ease-in-out hover:drop-shadow-sm hover:shadow-amber-50 from-[#161A31] to-[#06091F] p-[15px] rounded-xl flex w-full justify-around cursor-pointer text-[18px] font-[500]">
             See my work
           </button>
         </div>

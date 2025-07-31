@@ -44,7 +44,7 @@ export default function Work() {
           return (
             <div
               key={item.id}
-              className="bg-linear-to-r from-[#3637496E] to-[#3637497D] p-[1px] rounded-2xl max-lg:w-full max-xl:w-[48%] w-[600px] h-[190px] max-md:h-[230px] relative"
+              className="bg-linear-to-r from-[#3637496E] to-[#3637497D] p-[1px] rounded-2xl max-lg:w-full xl:w-[48%] w-[600px] h-[190px] max-md:h-[230px] relative"
             >
               <div className=" flex gap-[20px] max-md:flex-col bg-gradient-to-br from-[#04071D] to-[#0C0E23] p-[30px] max-xl:p-[20px] rounded-2xl h-full hover:opacity-90  transition-opacity">
                 <Image

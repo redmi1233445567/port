@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import pro1 from "../../public/download (1).png";
 import pro2 from "../../public/download (2).png";
@@ -10,6 +11,7 @@ import tail from "../../public/tech (1).png";
 import a from "../../public/Image (3).png";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const data = [
@@ -61,7 +63,12 @@ export default function Projects() {
         A small selection of{" "}
         <span className="text-[#CBACF9]">recent projects</span>
       </p>
-      <div className="flex flex-wrap gap-[20px] justify-between max-lg:justify-center">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }} // يبدأ خارج الشاشة يمين
+        whileInView={{ x: 0, opacity: 1 }} // يتحرك لمكانه لما يظهر
+        transition={{ duration: 1 }} // مدة الحركة
+        className="flex flex-wrap gap-[20px] justify-between max-lg:justify-center"
+      >
         {data.map((box) => {
           return (
             <div
@@ -110,7 +117,7 @@ export default function Projects() {
             </div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

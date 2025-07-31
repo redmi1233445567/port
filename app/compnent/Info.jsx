@@ -12,6 +12,7 @@ import c3 from "../../public/Image (2).png";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import bg from "../../public/BG.png";
+import { motion } from "framer-motion";
 
 export default function Info() {
   const copyEmail = () => {
@@ -29,7 +30,15 @@ export default function Info() {
         className=" absolute top-0 left-0 w-full -z-30"
       />
       <div className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px] grid grid-rows-6 grid-cols-11 xl:gap-[20px] max-xl:gap-y-[20px]  max-xl:grid-cols-2 max-xl:grid-rows-13">
-        <div className=" relative col-span-7 row-span-6 rounded-2xl overflow-hidden max-xl:col-span-2 max-xl:row-span-7 ">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.5,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          className=" relative col-span-7 row-span-6 rounded-2xl overflow-hidden max-xl:col-span-2 max-xl:row-span-7 "
+        >
           <Image
             src={b}
             alt="Picture of the author"
@@ -59,8 +68,16 @@ export default function Info() {
           <p className=" absolute bottom-[10%] left-[5%] font-bold text-[32px] w-[390px] max-xl:w-[227px] max-xl:text-[20px]">
             I prioritize client collaboration, fostering open communication
           </p>
-        </div>
-        <div className="row-span-3 col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl relative -z-40">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          className="row-span-3 col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl relative -z-40"
+        >
           <div className=" p-[20px] bg-gradient-to-r from-[#04071D] to-[#0C0E23] rounded-2xl">
             <p className="font-bold text-[30px] max-w-[411px] max-md:text-[20px]">
               I’m very flexible with time zone communications
@@ -85,8 +102,16 @@ export default function Info() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row-span-3 overflow-hidden col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+          className="row-span-3 overflow-hidden col-span-4 bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl "
+        >
           <div className=" p-[20px] bg-gradient-to-r from-[#04071D] to-[#0C0E23] rounded-2xl relative h-full flex items-center">
             <div className=" relative z-20">
               <p className="text-[14px] text-[#C1C2D3] max-md:text-[10px]">
@@ -125,7 +150,7 @@ export default function Info() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="mt-[40px] mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px] lg:grid grid-rows-4 grid-cols-11 gap-[20px]">
         <div className="bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49  p-[1px] rounded-2xl row-span-2 col-span-3 ">
