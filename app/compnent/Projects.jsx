@@ -11,7 +11,7 @@ import tail from "../../public/tech (1).png";
 import a from "../../public/Image (3).png";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Projects() {
   const data = [
@@ -58,66 +58,71 @@ export default function Projects() {
   ];
 
   return (
-    <div className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px]" id="project">
+    <div
+      className="mx-[200px] max-2xl:mx-[50px] max-md:mx-[20px] overflow-hidden"
+      id="project"
+    >
       <p className="text-[48px] font-bold leading-[100%] text-center mt-[150px] mb-[60px]">
         A small selection of{" "}
         <span className="text-[#CBACF9]">recent projects</span>
       </p>
-      <motion.div
-        initial={{ x: 100, opacity: 0 }} // يبدأ خارج الشاشة يمين
-        whileInView={{ x: 0, opacity: 1 }} // يتحرك لمكانه لما يظهر
-        transition={{ duration: 1 }} // مدة الحركة
-        className="flex flex-wrap gap-[20px] justify-between max-lg:justify-center"
-      >
-        {data.map((box) => {
-          return (
-            <div
-              key={box.id}
-              className="bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49 p-[1px] rounded-2xl w-[48%] max-lg:w-[100%]"
-            >
-              <div className=" p-[20px] bg-gradient-to-r from-[#04071D] to-[#0C0E23] rounded-2xl w-full h-full overflow-hidden">
-                <div className=" relative bg-[#13162D] flex justify-center overflow-hidden">
-                  <Image
-                    src={a}
-                    alt="Picture of the author"
-                    className=" absolute top-0 left-0 "
-                  />
-                  <Image
-                    src={box.img}
-                    alt="Picture of the author"
-                    className="w-[449px] h-[364px] max-md:w-[279px] max-md:h-[198px] rounded-xl rotate-6 translate-y-[10%] hover:rotate-0 hover:translate-0 transition-all"
-                  />
-                </div>
-                <p className="text-[32px] max-md:text-[20px] font-bold mt-[30px]">
-                  {box.title}
-                </p>
-                <p className="text-[#BEC1DD] max-md:text-[14px] text-[20px] my-[20px]">
-                  {box.dis}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex">
-                    {box.item.map((it, ind) => {
-                      return (
-                        <Image
-                          key={ind}
-                          src={it}
-                          alt="Picture of the author"
-                          className="ml-[-6px] hover:scale-3d transition-all max-md:w-[34px] max-md:h-[34px]"
-                        />
-                      );
-                    })}
+      <AnimatePresence>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }} // يبدأ خارج الشاشة يمين
+          whileInView={{ x: 0, opacity: 1 }} // يتحرك لمكانه لما يظهر
+          transition={{ duration: 1 }} // مدة الحركة
+          className="flex flex-wrap gap-[20px] justify-between max-lg:justify-center"
+        >
+          {data.map((box) => {
+            return (
+              <div
+                key={box.id}
+                className="bg-linear-to-r from-[#3637496E]/43 to-[#3637497D]/49 p-[1px] rounded-2xl w-[48%] max-lg:w-[100%]"
+              >
+                <div className=" p-[20px] bg-gradient-to-r from-[#04071D] to-[#0C0E23] rounded-2xl w-full h-full overflow-hidden">
+                  <div className=" relative bg-[#13162D] flex justify-center overflow-hidden">
+                    <Image
+                      src={a}
+                      alt="Picture of the author"
+                      className=" absolute top-0 left-0 "
+                    />
+                    <Image
+                      src={box.img}
+                      alt="Picture of the author"
+                      className="w-[449px] h-[364px] max-md:w-[279px] max-md:h-[198px] rounded-xl rotate-6 translate-y-[10%] hover:rotate-0 hover:translate-0 transition-all"
+                    />
                   </div>
-                  <Link href={box.link}>
-                    <p className="text-[20px] max-md:text-[14px] text-[#CBACF9] cursor-pointer hover:translate-x-[10px] transition-all font-[500]">
-                      Check Live Site
-                    </p>
-                  </Link>
+                  <p className="text-[32px] max-md:text-[20px] font-bold mt-[30px]">
+                    {box.title}
+                  </p>
+                  <p className="text-[#BEC1DD] max-md:text-[14px] text-[20px] my-[20px]">
+                    {box.dis}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <div className="flex">
+                      {box.item.map((it, ind) => {
+                        return (
+                          <Image
+                            key={ind}
+                            src={it}
+                            alt="Picture of the author"
+                            className="ml-[-6px] hover:scale-3d transition-all max-md:w-[34px] max-md:h-[34px]"
+                          />
+                        );
+                      })}
+                    </div>
+                    <Link href={box.link}>
+                      <p className="text-[20px] max-md:text-[14px] text-[#CBACF9] cursor-pointer hover:translate-x-[10px] transition-all font-[500]">
+                        Check Live Site
+                      </p>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </motion.div>
+            );
+          })}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
